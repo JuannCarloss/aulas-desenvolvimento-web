@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Tipos</title>
+</head>
+
+<body>
+    <form>
+        <legend>Entrada de Números</legend>
+        <label>Número 1</label>
+        <input type="text" id="numero1" />
+        <label>Número 2</label>
+        <input type="text" id="numero2" />
+        <input type="button" value="Somar" onclick="exibir()">
+    </form>
+    <script>
+        function exibir() {
+            let numero1 = Number(document.getElementById('numero1').value);
+            let numero2 = Number(document.getElementById('numero2').value);
+            alert(numero1 + numero2);
+        }
+    </script>
+</body>
+
+</html>

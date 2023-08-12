@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>horas trabalhadas</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Horas Trabalhadas</legend>
+
+            <label>Horas trabalhadas:</label><br>
+            <input type="number" id="horas"> <br> <br>
+
+            <label>Valor por Horas:</label><br>
+            <input type="number" id="valor"><br> <br>
+
+            <labe>Desconto:</label><br>
+            <input type="number" id="desconto"><br> <br>
+
+            <label>Bônus:</label><br>
+            <input type="number" id="bonus"><br><br>
+
+            <input type="button" value="Calcular" id="button" onclick="calc()">
+
+        </fieldset>
+    </form>
+
+    <script>
+        function calc() {
+            let horasTrab = parseInt(document.getElementById('horas').value);
+            let valorHoras = parseInt(document.getElementById('valor').value);
+            let desc = parseInt(document.getElementById('desconto').value);
+            let bonus = parseInt(document.getElementById('bonus').value);
+            let calculo = (valorHoras * horasTrab) - desc + bonus;
+
+            alert (`Seu salário é: ${calculo}`)
+
+        }
+    </script>
+</body>
+
+</html>
